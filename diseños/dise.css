@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #d17272;
+}
+
+.gallery {
+    position: relative;
+    max-width: 800px;
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-right: 10px;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
+ }
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prevBtn {
+    left: 10px;
+}
+
+.nextBtn {
+    right: 10px;
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+}
+.navigation button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.design-text {
+    font-size: 24px; /* Tamaño de fuente más grande */
+    color: black; /* Color negro */
+    margin-bottom: 10px;
+}
+.arriba{
+    color: #fff;
+}
+.abajo{
+    color:red;
+    font-size: 20px;
+}
+.nextBtn, .prevBtn {
+    font-size: 24px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px;
+}
+/* Estilos para pantallas pequeñas, como dispositivos Android */
+@media (max-width: 767px) {
+    .gallery {
+        max-width: 100%;
+        padding: 0 10px; /* Agregamos un poco de espacio en los lados */
+    }
+
+    .slider img {
+        margin-right: 5px; /* Reducimos el margen entre las imágenes */
+    }
+
+    .design-text {
+        font-size: 18px; /* Tamaño de fuente más pequeño */
+    }
+
+    .nextBtn, .prevBtn {
+        font-size: 18px; /* Tamaño de fuente más pequeño */
+        padding: 5px 10px; /* Reducimos el espacio interno */
+        margin: 5px; /* Reducimos el margen */
+    }
+
+    .navigation button {
+        font-size: 16px; /* Tamaño de fuente más pequeño */
+        padding: 3px 6px; /* Reducimos el espacio interno */
+        margin: 0 3px; /* Reducimos el margen */
+    }
+}
+/* Estilos para pantallas pequeñas, como dispositivos Android */
+@media (max-width: 479px) {
+    .gallery {
+        padding: 0 5px; /* Aún más espacio reducido en los lados */
+    }
+
+    .slider img {
+        margin-right: 2px; /* Margen mínimo entre las imágenes */
+    }
+
+    .design-text {
+        font-size: 16px; /* Tamaño de fuente aún más pequeño */
+    }
+
+    .nextBtn, .prevBtn {
+        font-size: 16px; /* Tamaño de fuente aún más pequeño */
+        padding: 3px 6px; /* Espacio interno más reducido */
+        margin: 3px; /* Margen mínimo */
+    }
+
+    .navigation button {
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+        padding: 2px 4px; /* Espacio interno más reducido */
+        margin: 0 2px; /* Margen mínimo */
+    }
+}
